@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+ <!-- 
+ <h1>Welcome to UBS</h1>
+ <p>Genesys Web Messaging Test</p>
+ -->
+</body>
+ <style>
+body {
+  background-image: url("/UBS_Screenshot.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
+<script type="text/javascript" charset="utf-8">
+ (function (g, e, n, es, ys) {
+    g['_genesysJs'] = e;
+    g[e] = g[e] || function () {
+      (g[e].q = g[e].q || []).push(arguments)
+    };
+    g[e].t = 1 * new Date();
+    g[e].c = es;
+    ys = document.createElement('script'); ys.async = 1; ys.src = n; ys.charset = 'utf-8'; document.head.appendChild(ys);
+  })(window, 'Genesys', 'https://apps.mypurecloud.de/genesys-bootstrap/genesys.min.js', {
+    environment: 'prod-euc2',
+    deploymentId: 'db13a524-5a8a-45c9-853c-2a6bd78d5447'
+  });
+
+</script>
+<script type="text/javascript" charset="utf-8">
+ Genesys("command", "Database.set", {
+  messaging: {
+    customAttributes: {
+      Division: "ITMA"
+    }
+  }
+}
+);
+</script>
+</html>
